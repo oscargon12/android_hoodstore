@@ -1,13 +1,15 @@
-package com.example.reto1_session.Entidades;
+package com.example.reto1_session.Entities;
 
 public class Product {
     private int image;
     private String name;
-    private String price;
+    private String description;
+    private int price;
 
-    public Product(int image, String name, String price) {
+    public Product(int image, String name, String description, int price) {
         this.image = image;
         this.name = name;
+        this.description = description;
         this.price = price;
     }
 
@@ -27,11 +29,19 @@ public class Product {
         this.name = name;
     }
 
-    public String getPrice() {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

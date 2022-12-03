@@ -1,6 +1,8 @@
 package com.example.reto1_session.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.icu.text.IDNA;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,28 +11,29 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.reto1_session.Entidades.Product;
+import com.example.reto1_session.Entities.Product;
+import com.example.reto1_session.Info;
 import com.example.reto1_session.R;
 
 import java.util.ArrayList;
 
 public class ProductAdapter extends BaseAdapter {
     private Context context;
-    private ArrayList<Product> productArrayList;
+    private ArrayList<Product> arrayProducts;
 
-    public ProductAdapter(Context context, ArrayList<Product> productArrayList) {
+    public ProductAdapter(Context context, ArrayList<Product> arrayProducts) {
         this.context = context;
-        this.productArrayList = productArrayList;
+        this.arrayProducts = arrayProducts;
     }
 
     @Override
     public int getCount() {
-        return productArrayList.size();
+        return arrayProducts.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return productArrayList.get(i);
+        return arrayProducts.get(i);
     }
 
     @Override
@@ -43,18 +46,33 @@ public class ProductAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = LayoutInflater.from(this.context);
         view = layoutInflater.inflate(R.layout.product_template, null);
 
-        Product product = productArrayList.get(i);
-
         //Referenciando elementos de la plantilla
         ImageView imgProduct = (ImageView) view.findViewById(R.id.imgProduct);
-        TextView productName = (TextView) view.findViewById(R.id.productName);
-        TextView productPrice = (TextView) view.findViewById(R.id.productPrice);
-        Button productBtn = (Button) view.findViewById(R.id.productBtn);
+        TextView textNameProduct = (TextView) view.findViewById(R.id.textNameProduct);
+        TextView textDescriptionProduct = (TextView) view.findViewById(R.id.textDescriptionProduct);
+        Button textPriceProduct = (Button) view.findViewById(R.id.textPriceProduct);
+
+        //Creo producto igual al que se referencia
+        Product product = arrayProducts.get(i);
 
         //Pasar los datos que vienen de producto
         imgProduct.setImageResource(product.getImage());
-        productName.setText(product.getName());
-        productPrice.setText(String.valueOf(product.getPrice()));
+        textNameProduct.setText(product.getName());
+        textDescriptionProduct.setText(product.getDescription());
+        textPriceProduct.setText(String.valueOf(product.getPrice()));
+
+        //Function for link intent to info
+        imgProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context.getApplicationContext(), Info.class);
+                intent.putExtra("image", product.getImage());
+                intent.putExtra("name", product.getName());
+                intent.putExtra("description", product.getDescription());
+                intent.putExtra("price", product.getPrice());
+                context.startActivity(intent);
+            }
+        });
 
         return view;
     }

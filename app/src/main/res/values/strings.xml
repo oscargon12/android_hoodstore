@@ -3,4 +3,5 @@
     <string name="btnText">Entrar a la tienda</string>
     <string name="listProductsTitle">Conoce nuestros productos</string>
     <string name="btn_detail">Ver detalle</string>
+    <string name="DetailProductTitle">Detalle del producto</string>
 </resources>
