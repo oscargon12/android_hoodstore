@@ -17,9 +17,10 @@
 
             <ImageView
                 android:id="@+id/imgProduct"
-                android:layout_width="146dp"
-                android:layout_height="144dp"
-                app:srcCompat="@drawable/rym" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/rym"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,16 +33,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="TextView"
-                    android:textSize="20dp" />
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppins_font"
+                    android:textFontWeight="700"
+                    android:textSize="25dp" />
 
                 <TextView
                     android:id="@+id/textDescriptionProduct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="TextView"
-                    android:textColor="#F44336"
-                    android:textFontWeight="700"
-                    android:textSize="28dp" />
+                    android:textColor="#616161"
+                    android:fontFamily="@font/poppins_font"
+                    android:textFontWeight="500"
+                    android:textSize="20dp" />
 
                 <Button
                     android:id="@+id/textPriceProduct"
