@@ -24,13 +24,15 @@ public class Catalog extends AppCompatActivity {
         arrayProducts = new ArrayList<>();
 
         //Listado / Creacion de productos
-        Product producto1 = new  Product(R.drawable.rym, "Saco 1", "Descripcion1", 100 );
-        Product producto2 = new  Product(R.drawable.stranger, "Saco 2", "Descripcion2", 120 );
-        Product producto3 = new  Product(R.drawable.witcher, "Saco 3", "Descripcion3", 110 );
+        Product producto1 = new  Product(R.drawable.rym, "Rick and Morty Pair", "Pullover Unisex Pullover Hoodie", 100 );
+        Product producto2 = new  Product(R.drawable.stranger, "Netflix Stranger Things", "SuperHeroes Inc. Hoodie", 120 );
+        Product producto3 = new  Product(R.drawable.witcher, "Netflix Witcher", "SuperHeroes Inc. Contrast Pullover Hooded Sweatshirt", 110 );
+        Product producto4 = new  Product(R.drawable.hogw, "Harry Potter Hogwarts", "College Crest Pullover Hoodie", 130 );
 
         arrayProducts.add(producto1);
         arrayProducts.add(producto2);
         arrayProducts.add(producto3);
+        arrayProducts.add(producto4);
 
         listViewProducts = (ListView) findViewById(R.id.listViewProducts);
         productAdapter = new ProductAdapter(this, arrayProducts);

@@ -50,7 +50,7 @@ public class ProductAdapter extends BaseAdapter {
         ImageView imgProduct = (ImageView) view.findViewById(R.id.imgProduct);
         TextView textNameProduct = (TextView) view.findViewById(R.id.textNameProduct);
         TextView textDescriptionProduct = (TextView) view.findViewById(R.id.textDescriptionProduct);
-        Button textPriceProduct = (Button) view.findViewById(R.id.textPriceProduct);
+        TextView textPriceProduct = (TextView) view.findViewById(R.id.textPriceProduct);
 
         //Creo producto igual al que se referencia
         Product product = arrayProducts.get(i);

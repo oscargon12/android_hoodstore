@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:textSize="18dp"
+        android:fontFamily="@font/poppins_font"
+        android:textSize="14dp"
         android:text="@string/DetailProductTitle" />
 
     <androidx.cardview.widget.CardView
@@ -46,25 +47,39 @@
                 android:id="@+id/textNameInfoProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_font"
+                android:textColor="#000000"
+                android:textFontWeight="700"
+                android:textSize="18dp"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/textDescriptionInfoProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#616161"
+                android:fontFamily="@font/poppins_font"
+                android:textFontWeight="500"
+                android:textSize="14dp"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/textPriceInfoProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_font"
+                android:textColor="#F44336"
+                android:textFontWeight="700"
+                android:textSize="16dp"
                 android:text="TextView" />
 
             <Button
                 android:id="@+id/btnInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_marginHorizontal="14dp"
+                android:fontFamily="@font/poppins_font"
+                android:text="@string/BtnInfo" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
