@@ -25,7 +25,7 @@
                 app:srcCompat="@drawable/rym"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="230dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -44,21 +44,43 @@
                     android:id="@+id/textDescriptionProduct"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_font"
                     android:text="TextView"
                     android:textColor="#616161"
-                    android:fontFamily="@font/poppins_font"
                     android:textFontWeight="500"
                     android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/textPriceProduct"
-                    android:layout_width="130dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="textView"
                     android:fontFamily="@font/poppins_font"
+                    android:text="textView"
                     android:textColor="#F44336"
                     android:textFontWeight="700"
                     android:textSize="16dp" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnDeleteProduct"
+                    android:layout_width="25dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/ic_baseline_delete_24"
+                    android:layout_marginVertical="12dp"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btnEditProduct"
+                    android:layout_width="27dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/ic_baseline_edit_24"
+                    android:text="" />
+            </LinearLayout>
+
         </LinearLayout>
 </androidx.cardview.widget.CardView>
