@@ -41,7 +41,7 @@
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginBottom="50dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@drawable/rym" />
 
             <TextView
                 android:id="@+id/textNameInfoProduct"

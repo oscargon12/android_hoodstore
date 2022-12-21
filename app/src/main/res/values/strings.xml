@@ -5,4 +5,7 @@
     <string name="btn_detail">Ver detalle</string>
     <string name="DetailProductTitle">Detalle del producto</string>
     <string name="BtnInfo">Comprar</string>
+    <string name="formProductTitle">Nuevo producto</string>
+    <string name="addProductBtn">Crear producto</string>
+    <string name="addProductSubtitle">Diligencia el formulario paa agregar un nuevo producto</string>
 </resources>

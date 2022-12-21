@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "456991389156",
+    "project_id": "hoodstore-70f68",
+    "storage_bucket": "hoodstore-70f68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456991389156:android:ba8d1ea05a072dd415c3f1",
+        "android_client_info": {
+          "package_name": "com.example.reto1_session"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456991389156-di2qn2f3crqfmo0ipkpl67525tps40vg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEPsf3KlHcG1uErtlOa4WeLLNu8tGjXpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456991389156-di2qn2f3crqfmo0ipkpl67525tps40vg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

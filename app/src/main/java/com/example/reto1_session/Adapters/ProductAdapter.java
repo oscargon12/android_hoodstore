@@ -26,6 +26,14 @@ public class ProductAdapter extends BaseAdapter {
         this.arrayProducts = arrayProducts;
     }
 
+    public ArrayList<Product> getArrayProducts() {
+        return arrayProducts;
+    }
+
+    public void setArrayProducts(ArrayList<Product> arrayProducts) {
+        this.arrayProducts = arrayProducts;
+    }
+
     @Override
     public int getCount() {
         return arrayProducts.size();
@@ -46,22 +54,38 @@ public class ProductAdapter extends BaseAdapter {
         LayoutInflater layoutInflater = LayoutInflater.from(this.context);
         view = layoutInflater.inflate(R.layout.product_template, null);
 
-        //Referenciando elementos de la plantilla
+        //Creo producto igual al que se referencia
+        Product product = arrayProducts.get(i);
+
+        //Referenciando elementos de la plantilla (product_template)
         ImageView imgProduct = (ImageView) view.findViewById(R.id.imgProduct);
         TextView textNameProduct = (TextView) view.findViewById(R.id.textNameProduct);
         TextView textDescriptionProduct = (TextView) view.findViewById(R.id.textDescriptionProduct);
         TextView textPriceProduct = (TextView) view.findViewById(R.id.textPriceProduct);
-
-        //Creo producto igual al que se referencia
-        Product product = arrayProducts.get(i);
+        Button btnEditProduct = (Button) view.findViewById(R.id.btnEditProduct);
+        Button btnDeleteProduct = (Button) view.findViewById(R.id.btnDeleteProduct);
 
         //Pasar los datos que vienen de producto
-        imgProduct.setImageResource(product.getImage());
+        imgProduct.setImageResource(R.drawable.rym);
         textNameProduct.setText(product.getName());
         textDescriptionProduct.setText(product.getDescription());
         textPriceProduct.setText(String.valueOf(product.getPrice()));
 
-        //Function for link intent to info
+        btnDeleteProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        btnEditProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Link desde la foto en el catálogo hasta el activity_info de cada producto
         imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
