@@ -25,12 +25,12 @@
 
 ________________________
 
-<img src="https://github.com/oscargon12/android_hoodstore/blob/main/hoodstore.gif?raw=true" alt="App-navigation" style="width:300px"/>
+<img src="https://github.com/oscargon12/android_hoodstore/blob/main/hoodstore.gif?raw=true" alt="App-navigation" style="width:280px"/>
  
 ## Acerca Del Proyecto
 Este proyecto ha sido creado con **java** y **Firebase**, mediante el IDE **Android Studio**.
 
-La aplicación **Hoodstore** ha sido creada como ejercicio evaluativo para el ciclo 4 de programación (Desarrollo Móbil) UNAB/MinTic .\
+La aplicación **Hoodstore** ha sido creada como ejercicio evaluativo para el ciclo 4 de programación (Desarrollo Móvil) UNAB/MinTic .\
 **Hoodstore** dentro del ejercicio, funciona como una app, para la administración de productos.\
 Las distintas funcionalidades han sido creadas paso a paso conforme avanzó el curso y como entrega final -Además de los features desarrollados- se propone una mejora en la interfaz y en la usabilidad.
 
@@ -43,6 +43,8 @@ Las distintas funcionalidades han sido creadas paso a paso conforme avanzó el c
 - CRUD con firebase
 - Mapas
 
+<img src="https://github.com/oscargon12/android_hoodstore/blob/main/screens.jpg?raw=true" alt="App-navigation" style="width:700px"/>
+
 ________________________
 
 ## Comandos disponibles
@@ -52,16 +54,16 @@ Deberá realizar la instalación del IDE (Recomendado IntelliJ o Android Studio)
 
 Podrá obtener una versión del repositorio ejecutando en la terminal:
 
-```https://github.com/oscargon12/android_hoodstore.git```
+```git clone https://github.com/oscargon12/android_hoodstore.git```
 
 ________________________
 
 ## Sprints
 
-Actualmente el proyecto se encuantra realizado hasta el Sprint No. 2
+Actualmente el proyecto se encuantra realizado hasta el Sprint No. 4
 
 ### `Sprint 1`
-Se realizó la maquetación y deseño de interfaz de las pantallas:
+Se realizó la maquetación y diseño de interfaz de las pantallas:
 - Pantalla de inicio
 - Listado de productos
 - Detalle de producto
@@ -70,4 +72,7 @@ Se realizó la maquetación y deseño de interfaz de las pantallas:
 La información del catálogo se ha hecho más dinámica, usando un template con el modelo de la información del producto el cual será consumido por el listado de productos mediante un adapter.
 
 ### `Sprint 3`
-Se inició el desarrollo de las funciones CRUD mediante una base de datos con Firestore.
+La información del catálogo ahora está siendo consultda en firebase, se ha creado una base de datos de productos en **Firestore**, la cual permitirá los métodos CRUD (Inserción, consulta, actualización y eliminación) de productos.
+
+### `Sprint 4`
+Se ha implementado el inicio de sesión y registro a la aplicación, usando los servicios de Firebase Authentication. Además se ha implementado el mapa para ver las ubicaciones de los productos.
