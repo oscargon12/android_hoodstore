@@ -72,7 +72,8 @@ public class Catalog extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.itemMap:
-
+                intent = new Intent(getApplicationContext(), Maps.class); //Si presiono map, ir a mapas
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
