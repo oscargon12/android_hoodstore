@@ -25,20 +25,23 @@
 
 ________________________
 
+ ![Hoodstore navigation](https://github.com/oscargon12/android_hoodstore/blob/main/hoodstore.gif?raw=true)
+ 
 ## Acerca Del Proyecto
 Este proyecto ha sido creado con el framework React JS [Create React App](https://github.com/facebook/create-react-app).
 
-Podrá acceder al dominio de la aplicación aquí [Scoole App](https://oscargon12.github.io/scoole-app/).
-
-
-La aplicación **Scoole** ha sido creada como ejercicio de práctica para el curso de React JS de la Comisión 16985.\
-**Scoole** dentro del ejercicio, funciona como ecommerce, para la compra de vehículos de transporte alternativo.\
+La aplicación **Hoodsstore** ha sido creada como ejercicio evaluativo para el ciclo 4 de programación (Desarrollo Móbil) UNAB/MinTic .\
+**Scoole** dentro del ejercicio, funciona como una app, para la administración de productos.\
 Las distintas funcionalidades han sido creadas paso a paso conforme avanzó el curso y como entrega final -Además de los features desarrollados- se propone una mejora en la interfaz y en la usabilidad.
 
 ### Funcionalidades actuales
 - Pantalla de inicio (mainActivity)
+- Login y registro con Firebase authentication
 - Catálogo (activity_catalog)
+- Catálogo por template y adapter
 - Detalle de producto (activity_info)
+- CRUD con firebase
+- Mapas
 
 ________________________
 
@@ -66,8 +69,5 @@ Se realizó la maquetación y deseño de interfaz de las pantallas:
 ### `Sprint 2`
 La información del catálogo se ha hecho más dinámica, usando un template con el modelo de la información del producto el cual será consumido por el listado de productos mediante un adapter.
 
-________________________
-## Arquitectura del proyeccto
-
-L..
-________________________
+### `Sprint 3`
+Se inició el desarrollo de las funciones CRUD mediante una base de datos con Firestore.
