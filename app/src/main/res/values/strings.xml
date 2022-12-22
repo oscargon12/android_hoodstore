@@ -8,4 +8,9 @@
     <string name="formProductTitle">Nuevo producto</string>
     <string name="addProductBtn">Crear producto</string>
     <string name="addProductSubtitle">Diligencia el formulario paa agregar un nuevo producto</string>
+    <string name="loginBtn">Ingresar</string>
+    <string name="registerMessage">¿No tienes cuenta?</string>
+    <string name="loginBtnRegister">Registrarse</string>
+    <string name="loginTitle">Inicia sesión</string>
+    <string name="registerTitle">Registro</string>
 </resources>
