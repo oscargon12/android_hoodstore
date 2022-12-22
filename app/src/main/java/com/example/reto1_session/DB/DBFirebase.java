@@ -1,10 +1,13 @@
 package com.example.reto1_session.DB;
 
+import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
 import com.example.reto1_session.Adapters.ProductAdapter;
+import com.example.reto1_session.Catalog;
 import com.example.reto1_session.Entities.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -99,7 +102,7 @@ public class DBFirebase {
 
 
     //** metodo DELETE **
-    public void deleteData(String id){
+    public void deleteData(String id, Context context){
         db.collection("products").whereEqualTo("id", id)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -111,6 +114,14 @@ public class DBFirebase {
                             for(QueryDocumentSnapshot document : task.getResult()){
                                 document.getReference().delete();
                             }
+                        }
+                    }
+                }).addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            Intent intent = new Intent(context, Catalog.class);
+                            context.startActivity(intent);
                         }
                     }
                 });

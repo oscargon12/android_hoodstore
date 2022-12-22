@@ -34,20 +34,33 @@ public class Form extends AppCompatActivity {
         //Inicializo la DB
         dbFirebase = new DBFirebase();
 
-        //Funciones:
+        //** Funciones: **
+        //Form para update
+        Intent intentIN = getIntent();
+        if(intentIN.getBooleanExtra("edit", false)){
+            editNameForm.setText(intentIN.getStringExtra("name"));
+            editDescriptionForm.setText(intentIN.getStringExtra("description"));
+            editPriceForm.setText(intentIN.getStringExtra("price"));
+        }
+
+        //agregar producto
         btnForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Product product = new Product(
-                  editNameForm.getText().toString(),
+                        editNameForm.getText().toString(),
                         editDescriptionForm.getText().toString(),
                         Integer.parseInt(editPriceForm.getText().toString()),
                         "",
                         "",
                         ""
                 );
-
-                dbFirebase.insertData(product);
+                if(intentIN.getBooleanExtra("edit", false)){
+                    product.setId(intentIN.getStringExtra("id"));
+                    dbFirebase.editData(product);
+                } else {
+                    dbFirebase.insertData(product);
+                }
                 Intent intent = new Intent(getApplicationContext(), Catalog.class);
                 startActivity(intent);
             }

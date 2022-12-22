@@ -11,7 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.reto1_session.Catalog;
+import com.example.reto1_session.DB.DBFirebase;
 import com.example.reto1_session.Entities.Product;
+import com.example.reto1_session.Form;
 import com.example.reto1_session.Info;
 import com.example.reto1_session.R;
 
@@ -74,14 +77,25 @@ public class ProductAdapter extends BaseAdapter {
         btnDeleteProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                DBFirebase dbFirebase = new DBFirebase();
+                dbFirebase.deleteData(product.getId(), context);
             }
         });
 
         btnEditProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(context, Form.class);
+                //intent.putExtra("image", true);
+                intent.putExtra("edit", true);
+                intent.putExtra("id", product.getId());
+                intent.putExtra("name", product.getName());
+                intent.putExtra("description", product.getDescription());
+                intent.putExtra("price", product.getPrice());
+                intent.putExtra("image", product.getImage());
+                intent.putExtra("latitud", product.getLatitud());
+                intent.putExtra("longitud", product.getLongitud());
+                context.startActivity(intent);
             }
         });
 
