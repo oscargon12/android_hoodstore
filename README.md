@@ -25,13 +25,13 @@
 
 ________________________
 
- ![Hoodstore navigation](https://github.com/oscargon12/android_hoodstore/blob/main/hoodstore.gif?raw=true)
+<img src="https://github.com/oscargon12/android_hoodstore/blob/main/hoodstore.gif?raw=true" alt="App-navigation" style="width:300px"/>
  
 ## Acerca Del Proyecto
-Este proyecto ha sido creado con el framework React JS [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto ha sido creado con **java** y **Firebase**, mediante el IDE **Android Studio**.
 
-La aplicación **Hoodsstore** ha sido creada como ejercicio evaluativo para el ciclo 4 de programación (Desarrollo Móbil) UNAB/MinTic .\
-**Scoole** dentro del ejercicio, funciona como una app, para la administración de productos.\
+La aplicación **Hoodstore** ha sido creada como ejercicio evaluativo para el ciclo 4 de programación (Desarrollo Móbil) UNAB/MinTic .\
+**Hoodstore** dentro del ejercicio, funciona como una app, para la administración de productos.\
 Las distintas funcionalidades han sido creadas paso a paso conforme avanzó el curso y como entrega final -Además de los features desarrollados- se propone una mejora en la interfaz y en la usabilidad.
 
 ### Funcionalidades actuales
